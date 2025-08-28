@@ -1,0 +1,64 @@
+body {
+    margin: 0; 
+    padding: 0;
+    background: #000;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: clamp(4px, 2vw, 12px);
+    line-height: 1.2;
+    text-align: justify;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: url(image.jpeg) no-repeat center/cover;
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    background-clip: text;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    p {
+        font-size: clamp(3px, 1.5vw, 8px);
+        padding: 15px;
+        line-height: 1.1;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    p {
+        font-size: clamp(2px, 1vw, 6px);
+        padding: 10px;
+        line-height: 1;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    p {
+        font-size: clamp(6px, 1.5vw, 16px);
+        padding: 30px;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    p {
+        font-size: clamp(4px, 1.8vw, 10px);
+        padding: 20px;
+    }
+}
